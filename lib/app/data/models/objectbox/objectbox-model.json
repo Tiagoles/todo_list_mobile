@@ -1,0 +1,1976 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "2:5231748878005731394",
+      "lastPropertyId": "4:8041003147527280590",
+      "name": "DbInspecaoItem",
+      "properties": [
+        {
+          "id": "2:3731878184375889408",
+          "name": "cdItemInspecionado",
+          "indexId": "11:1447436408444684238",
+          "type": 6,
+          "flags": 32808
+        },
+        {
+          "id": "3:8977424009789844700",
+          "name": "dsItemInspecionado",
+          "type": 9
+        },
+        {
+          "id": "4:8041003147527280590",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5478816675630688827",
+      "lastPropertyId": "4:1248339656254302229",
+      "name": "DbTipoIrregularidade",
+      "properties": [
+        {
+          "id": "2:822324775179858223",
+          "name": "cdTipoIrregularidade",
+          "indexId": "12:8194400161772338246",
+          "type": 6,
+          "flags": 32808
+        },
+        {
+          "id": "3:6680350929984987195",
+          "name": "dsTipoIrregularidade",
+          "type": 9
+        },
+        {
+          "id": "4:1248339656254302229",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:253886540907439864",
+      "lastPropertyId": "4:3846267642497453504",
+      "name": "DbAcaoTomada",
+      "properties": [
+        {
+          "id": "2:5311597422403810263",
+          "name": "cdAcaoTomada",
+          "indexId": "10:5732340418351050981",
+          "type": 6,
+          "flags": 32808
+        },
+        {
+          "id": "3:957898157537580711",
+          "name": "dsAcaoTomada",
+          "type": 9
+        },
+        {
+          "id": "4:3846267642497453504",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:85925741024046311",
+      "lastPropertyId": "214:7321888295157234630",
+      "name": "DbInspecao",
+      "properties": [
+        {
+          "id": "1:2839472341752491506",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3881080775827018292",
+          "name": "nrInspecao",
+          "indexId": "1:2714100660174419182",
+          "type": 6,
+          "flags": 32808
+        },
+        {
+          "id": "3:6026242591746752971",
+          "name": "dtAberturaInspecao",
+          "type": 10
+        },
+        {
+          "id": "4:1383386101692235877",
+          "name": "cdUnConsumidora",
+          "type": 8
+        },
+        {
+          "id": "5:8020362335439666107",
+          "name": "nrPdaCarga",
+          "type": 8
+        },
+        {
+          "id": "6:29785416353090237",
+          "name": "cdConsumidor",
+          "type": 8
+        },
+        {
+          "id": "7:1473345091783218158",
+          "name": "cdClasse",
+          "type": 8
+        },
+        {
+          "id": "8:5396729109606476233",
+          "name": "tpFase",
+          "type": 9
+        },
+        {
+          "id": "9:8400953503299572825",
+          "name": "nrMedidorKwh",
+          "type": 8
+        },
+        {
+          "id": "10:208654660782685137",
+          "name": "nrMedidorKvarh",
+          "type": 8
+        },
+        {
+          "id": "11:1640274742350064609",
+          "name": "vlConstKwhPonta",
+          "type": 8
+        },
+        {
+          "id": "12:2857113489256401624",
+          "name": "vlConstKwhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "13:3240054146606055516",
+          "name": "vlConstKwhGeral",
+          "type": 8
+        },
+        {
+          "id": "14:6129727222133987364",
+          "name": "vlConstKwPonta",
+          "type": 8
+        },
+        {
+          "id": "15:2112298575098061706",
+          "name": "vlConstKwForaPonta",
+          "type": 8
+        },
+        {
+          "id": "16:4685047328354616684",
+          "name": "vlConstKwGeral",
+          "type": 8
+        },
+        {
+          "id": "17:8034164902076548869",
+          "name": "vlConstKvarhPonta",
+          "type": 8
+        },
+        {
+          "id": "18:1764064566410685769",
+          "name": "vlConstKvarhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "19:2287221953432039365",
+          "name": "vlConstKvarhGeral",
+          "type": 8
+        },
+        {
+          "id": "20:3271726447222877",
+          "name": "vlConstEspecial",
+          "type": 8
+        },
+        {
+          "id": "21:568576098758104389",
+          "name": "flLacreCxPadrao",
+          "type": 9
+        },
+        {
+          "id": "22:4540083835523685014",
+          "name": "flLacreMedidores",
+          "type": 9
+        },
+        {
+          "id": "23:3393393390191054969",
+          "name": "flRotacaoMedidores",
+          "type": 9
+        },
+        {
+          "id": "28:5772343886523291517",
+          "name": "dtConclusaoInspecao",
+          "type": 10
+        },
+        {
+          "id": "29:8380781649484773305",
+          "name": "cdInspetor",
+          "type": 8
+        },
+        {
+          "id": "30:2580124061425476583",
+          "name": "idUsuario",
+          "type": 9
+        },
+        {
+          "id": "31:7790693865543841274",
+          "name": "flSituacao",
+          "type": 8
+        },
+        {
+          "id": "32:7973606097911300045",
+          "name": "dsObservacao",
+          "type": 9
+        },
+        {
+          "id": "33:7266702386897694951",
+          "name": "hrAberturaInspecao",
+          "type": 9
+        },
+        {
+          "id": "34:6358291117367626846",
+          "name": "hrConclusaoInspecao",
+          "type": 9
+        },
+        {
+          "id": "35:5750009588919053653",
+          "name": "idUsuarioAbertura",
+          "type": 9
+        },
+        {
+          "id": "36:814118172619121436",
+          "name": "idUsuarioConclusao",
+          "type": 9
+        },
+        {
+          "id": "37:3073335512568248210",
+          "name": "dtCancelamento",
+          "type": 10
+        },
+        {
+          "id": "38:3200899157861956948",
+          "name": "idUsuarioCancelamento",
+          "type": 9
+        },
+        {
+          "id": "39:3570217757878779583",
+          "name": "anoReferencia",
+          "type": 8
+        },
+        {
+          "id": "40:4890845928956905688",
+          "name": "dtInspecao",
+          "type": 10
+        },
+        {
+          "id": "43:3490681756478479121",
+          "name": "vlConstMedidor",
+          "type": 8
+        },
+        {
+          "id": "45:2315483165604000686",
+          "name": "vlLacreCaixa",
+          "type": 8
+        },
+        {
+          "id": "46:3573331737914503311",
+          "name": "flResultado",
+          "type": 8
+        },
+        {
+          "id": "47:2191978653862744438",
+          "name": "flGeraFatura",
+          "type": 9
+        },
+        {
+          "id": "48:2312611684087729758",
+          "name": "vlConstMedidorKvarh",
+          "type": 8
+        },
+        {
+          "id": "49:2078469513302404196",
+          "name": "vlConstMedidorEsp",
+          "type": 8
+        },
+        {
+          "id": "50:7269757125056922251",
+          "name": "vlLacreMedidor5",
+          "type": 8
+        },
+        {
+          "id": "51:7503171782841291304",
+          "name": "dsIrregularidades",
+          "type": 9
+        },
+        {
+          "id": "53:3075787156318449096",
+          "name": "vlLacreCaixa1",
+          "type": 8
+        },
+        {
+          "id": "54:6224071049092317845",
+          "name": "vlLacreReativo",
+          "type": 8
+        },
+        {
+          "id": "55:4315938148058245774",
+          "name": "vlLacreReativo1",
+          "type": 8
+        },
+        {
+          "id": "56:2234046308502966589",
+          "name": "vlLacreTcs",
+          "type": 8
+        },
+        {
+          "id": "57:5680468880121227294",
+          "name": "vlLacreTcs1",
+          "type": 8
+        },
+        {
+          "id": "59:2318366775774705678",
+          "name": "flLacreControlado",
+          "type": 9
+        },
+        {
+          "id": "60:1884828619242476332",
+          "name": "dtLacreControlado",
+          "type": 10
+        },
+        {
+          "id": "61:5183423509298790147",
+          "name": "flMotivoInspecao",
+          "type": 8
+        },
+        {
+          "id": "62:5866108420773286239",
+          "name": "flMonitoramento",
+          "type": 9
+        },
+        {
+          "id": "63:7624009845850551320",
+          "name": "vlLacreControlado",
+          "type": 8
+        },
+        {
+          "id": "65:7280880467283236416",
+          "name": "flDeficienciaMedicao",
+          "type": 9
+        },
+        {
+          "id": "66:7610886538727048573",
+          "name": "flFaturamentoIncorreto",
+          "type": 9
+        },
+        {
+          "id": "95:3571118626254652621",
+          "name": "vlLacreConfMedAtivo1",
+          "type": 9
+        },
+        {
+          "id": "96:4520756319536359976",
+          "name": "vlLacreConfMedAtivo2",
+          "type": 9
+        },
+        {
+          "id": "97:2007774322721872241",
+          "name": "vlLacreConfMedAtivo3",
+          "type": 9
+        },
+        {
+          "id": "98:299748820836792446",
+          "name": "vlLacreConfMedAtivo4",
+          "type": 9
+        },
+        {
+          "id": "99:4141607229944698916",
+          "name": "vlLacreConfMedReativo1",
+          "type": 9
+        },
+        {
+          "id": "100:3565245620145548462",
+          "name": "vlLacreConfMedReativo2",
+          "type": 9
+        },
+        {
+          "id": "101:8897944134884751008",
+          "name": "vlLacreConfMedReativo3",
+          "type": 9
+        },
+        {
+          "id": "102:6074154132642007220",
+          "name": "vlLacreConfMedReativo4",
+          "type": 9
+        },
+        {
+          "id": "157:6648826901157536764",
+          "name": "vlLacreMedidor1",
+          "type": 9
+        },
+        {
+          "id": "158:7926639808332786434",
+          "name": "vlLacreMedidor2",
+          "type": 9
+        },
+        {
+          "id": "159:3030141186548514587",
+          "name": "vlLacreMedidor3",
+          "type": 9
+        },
+        {
+          "id": "160:2778078246212351215",
+          "name": "vlLacreMedidor4",
+          "type": 9
+        },
+        {
+          "id": "161:3049745937826443064",
+          "name": "vlLacreMedidorKvarh1",
+          "type": 9
+        },
+        {
+          "id": "162:6712463290697837102",
+          "name": "vlLacreMedidorKvarh2",
+          "type": 9
+        },
+        {
+          "id": "163:345219542857122910",
+          "name": "vlLacreMedidorKvarh3",
+          "type": 9
+        },
+        {
+          "id": "164:2984534908750517714",
+          "name": "vlLacreMedidorKvarh4",
+          "type": 9
+        },
+        {
+          "id": "165:5527102723198830756",
+          "name": "flPendencias",
+          "type": 9
+        },
+        {
+          "id": "166:4485567684468964699",
+          "name": "dsPendencias",
+          "type": 9
+        },
+        {
+          "id": "167:6453512150566398770",
+          "name": "dsObservacaoMotivo",
+          "type": 9
+        },
+        {
+          "id": "168:6125437072509054",
+          "name": "tpInspecao",
+          "type": 8
+        },
+        {
+          "id": "169:577736123050735007",
+          "name": "cdEmpresa",
+          "type": 8
+        },
+        {
+          "id": "170:8932976778434188786",
+          "name": "dsRua",
+          "type": 9
+        },
+        {
+          "id": "171:2122304525669964951",
+          "name": "dsComplemento",
+          "type": 9
+        },
+        {
+          "id": "172:4804781197782363773",
+          "name": "dsBairro",
+          "type": 9
+        },
+        {
+          "id": "173:2426257480834201540",
+          "name": "dsMunicipio",
+          "type": 9
+        },
+        {
+          "id": "174:6197063697967830679",
+          "name": "cdEstado",
+          "type": 9
+        },
+        {
+          "id": "175:4545728442040227942",
+          "name": "longitude",
+          "type": 8
+        },
+        {
+          "id": "176:4378115455311379852",
+          "name": "latitude",
+          "type": 8
+        },
+        {
+          "id": "177:7970017319898054165",
+          "name": "dsNumero",
+          "type": 8
+        },
+        {
+          "id": "178:2560118642208318216",
+          "name": "cdCep",
+          "type": 8
+        },
+        {
+          "id": "179:2830560262028990385",
+          "name": "cdCompCep",
+          "type": 8
+        },
+        {
+          "id": "180:652217860599952729",
+          "name": "cdMunicipio",
+          "type": 8
+        },
+        {
+          "id": "181:2674460841163915488",
+          "name": "flCarregadoPda",
+          "type": 9
+        },
+        {
+          "id": "184:59838775225991228",
+          "name": "nrCgcCpf",
+          "type": 8
+        },
+        {
+          "id": "185:3355548544131145904",
+          "name": "dsPostoTransformador",
+          "type": 9
+        },
+        {
+          "id": "186:7657311542504738450",
+          "name": "dsConsumidor",
+          "type": 9
+        },
+        {
+          "id": "187:1297976314025657403",
+          "name": "nrIe",
+          "type": 9
+        },
+        {
+          "id": "188:3507637642534664392",
+          "name": "dsClasse",
+          "type": 9
+        },
+        {
+          "id": "189:5528047539840464796",
+          "name": "vlTensaoNominal",
+          "type": 9
+        },
+        {
+          "id": "190:6699189263936263249",
+          "name": "vlUltConstKwhPonta",
+          "type": 8
+        },
+        {
+          "id": "191:2462643926615704522",
+          "name": "vlUltLeitKwhPonta",
+          "type": 8
+        },
+        {
+          "id": "192:866348061793200670",
+          "name": "vlUltConstKwhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "193:7982951968947298410",
+          "name": "vlUltLeitKwhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "194:7748192864947642525",
+          "name": "vlUltConstKwhGeral",
+          "type": 8
+        },
+        {
+          "id": "195:3337086844893826412",
+          "name": "vlUltLeitKwhGeral",
+          "type": 8
+        },
+        {
+          "id": "196:1955014524105526908",
+          "name": "vlUltConstEspecial",
+          "type": 8
+        },
+        {
+          "id": "197:6731443347430294838",
+          "name": "vlUltLeitEspecial",
+          "type": 8
+        },
+        {
+          "id": "198:1519070869963070338",
+          "name": "vlUltConstKvarhPonta",
+          "type": 8
+        },
+        {
+          "id": "199:8814702996392158644",
+          "name": "vlUltLeitKvarhPonta",
+          "type": 8
+        },
+        {
+          "id": "200:7972266511864295803",
+          "name": "vlUltConstKvarhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "201:6107576777928080736",
+          "name": "vlUltLeitKvarhForaPonta",
+          "type": 8
+        },
+        {
+          "id": "202:6553164541877564512",
+          "name": "vlUltConstKvarhGeral",
+          "type": 8
+        },
+        {
+          "id": "203:5660839874271961077",
+          "name": "vlUltLeitKvarhGeral",
+          "type": 8
+        },
+        {
+          "id": "204:4607436973615662930",
+          "name": "vlUltConstKwPonta",
+          "type": 8
+        },
+        {
+          "id": "205:8727089082574114425",
+          "name": "vlUltLeitKwPonta",
+          "type": 8
+        },
+        {
+          "id": "206:4416944507123207035",
+          "name": "vlUltConstKwForaPonta",
+          "type": 8
+        },
+        {
+          "id": "207:232471421427861929",
+          "name": "vlUltLeitKwForaPonta",
+          "type": 8
+        },
+        {
+          "id": "208:4573068896309774366",
+          "name": "vlUltConstKwGeral",
+          "type": 8
+        },
+        {
+          "id": "209:8181483415046814406",
+          "name": "vlUltLeitKwGeral",
+          "type": 8
+        },
+        {
+          "id": "210:7909428411950862904",
+          "name": "status",
+          "type": 6
+        },
+        {
+          "id": "211:6701319314640253285",
+          "name": "conclusaoId",
+          "indexId": "9:4220431140109947114",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoConclusao"
+        },
+        {
+          "id": "212:2096986224477146246",
+          "name": "cdTipoOcorrencia",
+          "type": 6
+        },
+        {
+          "id": "213:4817237248240413585",
+          "name": "dsComplementarOcorrencia",
+          "type": 9
+        },
+        {
+          "id": "214:7321888295157234630",
+          "name": "deletedAt",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:2825570073127763511",
+      "lastPropertyId": "5:1617621838537684342",
+      "name": "DbAcaoTomadaConclusao",
+      "properties": [
+        {
+          "id": "1:392762575216258225",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1651063137203003806",
+          "name": "acaoTomadaId",
+          "indexId": "2:4793532540544402700",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbAcaoTomada"
+        },
+        {
+          "id": "3:8245073748679843964",
+          "name": "inspecaoId",
+          "indexId": "3:4186865983202425440",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoConclusao"
+        },
+        {
+          "id": "4:4420954505844636664",
+          "name": "dtEfetivacao",
+          "type": 10
+        },
+        {
+          "id": "5:1617621838537684342",
+          "name": "dsObservacao",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:2804732931269595636",
+      "lastPropertyId": "98:3950321137206282977",
+      "name": "DbInspecaoConclusao",
+      "properties": [
+        {
+          "id": "1:3597564719026046975",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "4:4021542399261894082",
+          "name": "dsObservacao",
+          "type": 9
+        },
+        {
+          "id": "5:8577184367075439341",
+          "name": "vlTc1",
+          "type": 9
+        },
+        {
+          "id": "6:5184948077934924178",
+          "name": "vlTc2",
+          "type": 9
+        },
+        {
+          "id": "7:6921960522454527212",
+          "name": "vlTp1",
+          "type": 9
+        },
+        {
+          "id": "8:5452544643717965504",
+          "name": "vlTp2",
+          "type": 9
+        },
+        {
+          "id": "9:3002708303872434134",
+          "name": "vlCorrenteMaxima",
+          "type": 9
+        },
+        {
+          "id": "10:7113849449728498479",
+          "name": "vlCorrenteMaximaFim",
+          "type": 9
+        },
+        {
+          "id": "11:3611915166749659311",
+          "name": "vlCorrenteDisjuntor",
+          "type": 9
+        },
+        {
+          "id": "12:4547801747406479516",
+          "name": "vlChaveProtecao",
+          "type": 9
+        },
+        {
+          "id": "13:6040578328067162357",
+          "name": "vlCaboEntrada",
+          "type": 9
+        },
+        {
+          "id": "14:6208465240930920960",
+          "name": "vlLacAdicPadAtivo1",
+          "type": 9
+        },
+        {
+          "id": "15:2248736079217475199",
+          "name": "vlLacAdicPadAtivo2",
+          "type": 9
+        },
+        {
+          "id": "16:7138774607649639747",
+          "name": "vlLacAdicPadAtivo3",
+          "type": 9
+        },
+        {
+          "id": "17:3803331016191669645",
+          "name": "vlLacAdicPadAtivo4",
+          "type": 9
+        },
+        {
+          "id": "18:5190350064011401332",
+          "name": "vlLacAdicPadReativo1",
+          "type": 9
+        },
+        {
+          "id": "19:9100857716921406148",
+          "name": "vlLacAdicPadReativo2",
+          "type": 9
+        },
+        {
+          "id": "20:7978025942114465581",
+          "name": "vlLacAdicPadReativo3",
+          "type": 9
+        },
+        {
+          "id": "21:754724738340540801",
+          "name": "vlLacAdicPadReativo4",
+          "type": 9
+        },
+        {
+          "id": "22:3922033377338807118",
+          "name": "vlLacreAdicTcs1",
+          "type": 9
+        },
+        {
+          "id": "23:6250048723613973675",
+          "name": "vlLacreAdicTcs2",
+          "type": 9
+        },
+        {
+          "id": "24:6843261191317472118",
+          "name": "vlLacreAdicTcs3",
+          "type": 9
+        },
+        {
+          "id": "25:272750006755860684",
+          "name": "vlLacreAdicTcs4",
+          "type": 9
+        },
+        {
+          "id": "26:2300607584562171474",
+          "name": "vlLacAdicCxDeriva1",
+          "type": 9
+        },
+        {
+          "id": "27:1089351191736496110",
+          "name": "vlLacAdicCxDeriva2",
+          "type": 9
+        },
+        {
+          "id": "28:2088484851724832287",
+          "name": "vlLacAdicChaveProt1",
+          "type": 9
+        },
+        {
+          "id": "29:6146744671173428141",
+          "name": "vlLacAdicChaveProt2",
+          "type": 9
+        },
+        {
+          "id": "30:4973126731417155058",
+          "name": "vlLacreAdicBorne1",
+          "type": 9
+        },
+        {
+          "id": "31:3656621174693738496",
+          "name": "vlLacreAdicBorne2",
+          "type": 9
+        },
+        {
+          "id": "32:8408905833355258324",
+          "name": "vlLacreAdicBorne3",
+          "type": 9
+        },
+        {
+          "id": "33:5026452304398646890",
+          "name": "vlLacreAdicBorne4",
+          "type": 9
+        },
+        {
+          "id": "34:3378696178106593600",
+          "name": "vlLacreAdicChaveAfer1",
+          "type": 9
+        },
+        {
+          "id": "35:512324234729214411",
+          "name": "vlLacreAdicChaveAfer2",
+          "type": 9
+        },
+        {
+          "id": "36:5310778388715763741",
+          "name": "vlLacreAdicDemanda",
+          "type": 9
+        },
+        {
+          "id": "37:677910366660118681",
+          "name": "vlLacreAdicDisplay",
+          "type": 9
+        },
+        {
+          "id": "38:4231039885844811260",
+          "name": "vlLacreAdicPortaOptica",
+          "type": 9
+        },
+        {
+          "id": "39:2507485875362624218",
+          "name": "vlLacreAdicCubiculo1",
+          "type": 9
+        },
+        {
+          "id": "40:8926619850311757535",
+          "name": "vlLacreAdicCubiculo2",
+          "type": 9
+        },
+        {
+          "id": "41:3414625108001142224",
+          "name": "vlLacreAdicCxBarram1",
+          "type": 9
+        },
+        {
+          "id": "42:1824535431521034556",
+          "name": "vlLacreAdicCxBarram2",
+          "type": 9
+        },
+        {
+          "id": "43:2658126061943249705",
+          "name": "vlLacreAdicCxBarram3",
+          "type": 9
+        },
+        {
+          "id": "44:6973199841057019716",
+          "name": "vlLacreAdicCxBarram4",
+          "type": 9
+        },
+        {
+          "id": "45:125348836973824633",
+          "name": "vlLacreRetPadAtivo1",
+          "type": 9
+        },
+        {
+          "id": "46:4938325819817856502",
+          "name": "vlLacreRetPadAtivo2",
+          "type": 9
+        },
+        {
+          "id": "47:581131109813482372",
+          "name": "vlLacreRetPadAtivo3",
+          "type": 9
+        },
+        {
+          "id": "48:5978818860735018724",
+          "name": "vlLacreRetPadAtivo4",
+          "type": 9
+        },
+        {
+          "id": "49:635480813661670780",
+          "name": "vlLacreRetPadReativo1",
+          "type": 9
+        },
+        {
+          "id": "50:1199781939870780562",
+          "name": "vlLacreRetPadReativo2",
+          "type": 9
+        },
+        {
+          "id": "51:3374846648398240205",
+          "name": "vlLacreRetPadReativo3",
+          "type": 9
+        },
+        {
+          "id": "52:6135758409490570196",
+          "name": "vlLacreRetPadReativo4",
+          "type": 9
+        },
+        {
+          "id": "53:4844216756997202269",
+          "name": "vlLacreRetTcs1",
+          "type": 9
+        },
+        {
+          "id": "54:4169263172349736445",
+          "name": "vlLacreRetTcs2",
+          "type": 9
+        },
+        {
+          "id": "55:5392375360470982780",
+          "name": "vlLacreRetTcs3",
+          "type": 9
+        },
+        {
+          "id": "56:244603643326681712",
+          "name": "vlLacreRetTcs4",
+          "type": 9
+        },
+        {
+          "id": "57:5136553543136220012",
+          "name": "vlLacreRetCaixaDeriva1",
+          "type": 9
+        },
+        {
+          "id": "58:4983445681533164573",
+          "name": "vlLacreRetCaixaDeriva2",
+          "type": 9
+        },
+        {
+          "id": "59:7542568131895627900",
+          "name": "vlLacreRetChaveProtec1",
+          "type": 9
+        },
+        {
+          "id": "60:2235346721339596078",
+          "name": "vlLacreRetChaveProtec2",
+          "type": 9
+        },
+        {
+          "id": "61:8004027024561631378",
+          "name": "vlLacreRetBorne1",
+          "type": 9
+        },
+        {
+          "id": "62:3973987511364325604",
+          "name": "vlLacreRetBorne2",
+          "type": 9
+        },
+        {
+          "id": "63:4692288545267148575",
+          "name": "vlLacreRetBorne3",
+          "type": 9
+        },
+        {
+          "id": "64:4795214677264185925",
+          "name": "vlLacreRetBorne4",
+          "type": 9
+        },
+        {
+          "id": "65:5212579978220544327",
+          "name": "vlLacreRetChaveAfer1",
+          "type": 9
+        },
+        {
+          "id": "66:4089329210768798174",
+          "name": "vlLacreRetChaveAfer2",
+          "type": 9
+        },
+        {
+          "id": "67:4345854440563040367",
+          "name": "vlLacreRetDemanda",
+          "type": 9
+        },
+        {
+          "id": "68:4240615064250920592",
+          "name": "vlLacreRetDisplay",
+          "type": 9
+        },
+        {
+          "id": "69:7097533786340919285",
+          "name": "vlLacreRetPortaOptica",
+          "type": 9
+        },
+        {
+          "id": "70:7520034272006799666",
+          "name": "vlLacreRetCubiculo1",
+          "type": 9
+        },
+        {
+          "id": "71:1875676657091406872",
+          "name": "vlLacreRetCubiculo2",
+          "type": 9
+        },
+        {
+          "id": "72:4965133160608917761",
+          "name": "vlLacreRetCxBarram1",
+          "type": 9
+        },
+        {
+          "id": "73:6560846946994729081",
+          "name": "vlLacreRetCxBarram2",
+          "type": 9
+        },
+        {
+          "id": "74:2779966254347241505",
+          "name": "vlLacreRetCxBarram3",
+          "type": 9
+        },
+        {
+          "id": "75:8353438256547860580",
+          "name": "vlLacreRetCxBarram4",
+          "type": 9
+        },
+        {
+          "id": "76:9056785243172691624",
+          "name": "vlLeitKwhPonta",
+          "type": 9
+        },
+        {
+          "id": "77:7194407547065618474",
+          "name": "vlLeitKwhForaPonta",
+          "type": 9
+        },
+        {
+          "id": "78:8045257140865822394",
+          "name": "vlLeitKwhGeral",
+          "type": 9
+        },
+        {
+          "id": "79:402774564749374164",
+          "name": "vlLeitKwhEspecial",
+          "type": 9
+        },
+        {
+          "id": "80:1270688297224335761",
+          "name": "vlLeitKwPonta",
+          "type": 9
+        },
+        {
+          "id": "81:6319176186610229957",
+          "name": "vlLeitKwFPonta",
+          "type": 9
+        },
+        {
+          "id": "82:3869946601895205429",
+          "name": "vlLeitKwGeral",
+          "type": 9
+        },
+        {
+          "id": "83:3423552560897954219",
+          "name": "vlLeitKvarhPonta",
+          "type": 9
+        },
+        {
+          "id": "84:8815188931639713734",
+          "name": "vlLeitKvarhFPonta",
+          "type": 9
+        },
+        {
+          "id": "85:3910932990131178873",
+          "name": "vlLeitKvarhGeral",
+          "type": 9
+        },
+        {
+          "id": "86:5096483220404276293",
+          "name": "vlConstLeitKwhPonta",
+          "type": 9
+        },
+        {
+          "id": "87:6525429393651891224",
+          "name": "vlConstLeitKwhForaPonta",
+          "type": 9
+        },
+        {
+          "id": "88:8226467644429505892",
+          "name": "vlConstLeitKwhGeral",
+          "type": 9
+        },
+        {
+          "id": "89:3979997672271352654",
+          "name": "vlConstLeitKwPonta",
+          "type": 9
+        },
+        {
+          "id": "90:5832135753857744670",
+          "name": "vlConstLeitKwForaPonta",
+          "type": 9
+        },
+        {
+          "id": "91:6126273455697750855",
+          "name": "vlConstLeitKwGeral",
+          "type": 9
+        },
+        {
+          "id": "92:8265669063763501577",
+          "name": "vlConstLeitKvarhPonta",
+          "type": 9
+        },
+        {
+          "id": "93:4113040791241773672",
+          "name": "vlConsLeitKvarhForPonta",
+          "type": 9
+        },
+        {
+          "id": "94:4962236848203509837",
+          "name": "vlConstLeitKvarhGeral",
+          "type": 9
+        },
+        {
+          "id": "95:1868237506333646455",
+          "name": "vlConstLeitEspecial",
+          "type": 9
+        },
+        {
+          "id": "96:7513345551751594071",
+          "name": "inspecaoId",
+          "indexId": "4:7421468322955136287",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecao"
+        },
+        {
+          "id": "97:5267505090330821973",
+          "name": "dtInicio",
+          "type": 10
+        },
+        {
+          "id": "98:3950321137206282977",
+          "name": "dtFim",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:7552943960072200481",
+      "lastPropertyId": "4:7044280026730668908",
+      "name": "DbInspecaoItemConclusao",
+      "properties": [
+        {
+          "id": "1:9006637045642665582",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7026929384309725334",
+          "name": "inspecaoItemId",
+          "indexId": "5:5841344958131694957",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoItem"
+        },
+        {
+          "id": "3:6556153694644502497",
+          "name": "inspecaoId",
+          "indexId": "6:7353437603838875847",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoConclusao"
+        },
+        {
+          "id": "4:7044280026730668908",
+          "name": "flProcedenteImprocedente",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:2970404217127511343",
+      "lastPropertyId": "4:4887639211918516501",
+      "name": "DbTipoIrregularidadeConclusao",
+      "properties": [
+        {
+          "id": "1:3712817357583659982",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4834759478289839222",
+          "name": "tipoIrregularidadeId",
+          "indexId": "7:5206482996341926703",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbTipoIrregularidade"
+        },
+        {
+          "id": "3:2456907125634176366",
+          "name": "inspecaoId",
+          "indexId": "8:420303768960193213",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoConclusao"
+        },
+        {
+          "id": "4:4887639211918516501",
+          "name": "dsObservacao",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:3594454674993232966",
+      "lastPropertyId": "8:6304422739416343089",
+      "name": "DbAnexo",
+      "properties": [
+        {
+          "id": "1:2207673109358334187",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5805640512990286295",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:4315694650559664189",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "5:3351210648494040369",
+          "name": "size",
+          "type": 6
+        },
+        {
+          "id": "6:7785922579269436166",
+          "name": "geolocation",
+          "type": 9
+        },
+        {
+          "id": "7:6412779776904429668",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "8:6304422739416343089",
+          "name": "path",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:5339623612756823620",
+      "lastPropertyId": "3:7951320429833523198",
+      "name": "DbInspecaoAnexo",
+      "properties": [
+        {
+          "id": "1:2919389456130434133",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7143146718782500794",
+          "name": "inspecaoId",
+          "indexId": "13:6467909037060051256",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbInspecaoConclusao"
+        },
+        {
+          "id": "3:7951320429833523198",
+          "name": "anexoId",
+          "indexId": "14:1662213968321466127",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbAnexo"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:5273616598330605618",
+      "lastPropertyId": "6:7675728179871660619",
+      "name": "DbEventoServico",
+      "properties": [
+        {
+          "id": "1:4328318355197738988",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6315786521666475830",
+          "name": "cdEvento",
+          "indexId": "15:5869237286980712080",
+          "type": 6,
+          "flags": 32808
+        },
+        {
+          "id": "3:5024245501120987700",
+          "name": "dsEvento",
+          "type": 9
+        },
+        {
+          "id": "4:7398198177615687644",
+          "name": "cdTipoEvento",
+          "type": 8
+        },
+        {
+          "id": "5:839037284760256824",
+          "name": "idUsuario",
+          "type": 9
+        },
+        {
+          "id": "6:7675728179871660619",
+          "name": "flAtivoInativo",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "13:4971461859070938237",
+      "lastPropertyId": "18:3365160746770487518",
+      "name": "DbApontamentoHora",
+      "properties": [
+        {
+          "id": "1:6424847393136814353",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5250064739354817555",
+          "name": "cdEletricista",
+          "type": 6
+        },
+        {
+          "id": "3:4257423404639760013",
+          "name": "idSequencia",
+          "type": 6
+        },
+        {
+          "id": "4:8297512169181801201",
+          "name": "dtApontamento",
+          "type": 10
+        },
+        {
+          "id": "5:1163002563665893105",
+          "name": "dtHoraInicioApontamento",
+          "type": 10
+        },
+        {
+          "id": "6:1605938723336115198",
+          "name": "eventoId",
+          "indexId": "16:1691101050354025938",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "DbEventoServico"
+        },
+        {
+          "id": "7:6531524031087981591",
+          "name": "vlCoordenadaXInicioApontamento",
+          "type": 8
+        },
+        {
+          "id": "8:8391083350073245638",
+          "name": "vlCoordenadaYInicioApontamento",
+          "type": 8
+        },
+        {
+          "id": "9:6603614054253625661",
+          "name": "vlCoordenadaXTerminoApontamento",
+          "type": 8
+        },
+        {
+          "id": "10:5443625588142630849",
+          "name": "vlCoordenadaYTerminoApontamento",
+          "type": 8
+        },
+        {
+          "id": "11:4002168765819580877",
+          "name": "nrServico",
+          "type": 6
+        },
+        {
+          "id": "12:1025941660364897758",
+          "name": "cdEnvio",
+          "type": 6
+        },
+        {
+          "id": "13:1194159243276986242",
+          "name": "cdMatMembro",
+          "type": 6
+        },
+        {
+          "id": "14:4766443957486109954",
+          "name": "cdEquipe",
+          "type": 6
+        },
+        {
+          "id": "15:6259594484036752014",
+          "name": "cdUnConsumidora",
+          "type": 6
+        },
+        {
+          "id": "16:6969967559123619393",
+          "name": "dsObservacao",
+          "type": 9
+        },
+        {
+          "id": "17:1737413554018938150",
+          "name": "updatedAt",
+          "type": 10
+        },
+        {
+          "id": "18:3365160746770487518",
+          "name": "idOrigem",
+          "type": 6
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "13:4971461859070938237",
+  "lastIndexId": "16:1691101050354025938",
+  "lastRelationId": "3:1423887170457495499",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    8677722839470941716
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    646071005749178816,
+    7081239444220713105,
+    4602040893923173935,
+    4281402860735551021,
+    6499560851376996592,
+    6407994613359265151,
+    1419940260464389774,
+    9059110809148865131,
+    2181000355492396661,
+    3645035071810821629,
+    8124937375867617457,
+    1212450202652165806,
+    6558147209236940890,
+    6196934128904189298,
+    2592858172894445749,
+    4778109882790605109,
+    6315507703154382694,
+    1384737022671713436,
+    5441651325516017446,
+    2373283361407929104,
+    954933024533966310,
+    8377805264981513696,
+    3138753470198124029,
+    3607957842120090831,
+    1226201456254156157,
+    9036858823847702625,
+    7794231527613853067,
+    1045261436635418718,
+    5260144165490341483,
+    8361756324369102070,
+    8536724544058448751,
+    2492239217282226153,
+    5045356694990133437,
+    333916742271992312,
+    7545463414323475312,
+    7292501314424321456,
+    2609992201131687838,
+    5629498620536577956,
+    721618756544634874,
+    2977677695059933511,
+    7702928302993713893,
+    4447826255807045279,
+    1804985201697039823,
+    7863713217425314824,
+    1559481053073621717,
+    4125120111082149378,
+    585299917015480937,
+    6478739831487002605,
+    7297929001952790265,
+    7657858224342654425,
+    698677797449808666,
+    6407896623359433164,
+    2593878649031097917,
+    1541902856279036589,
+    1328775280598280749,
+    7028749082383648770,
+    2858814861996035158,
+    7258506589089152393,
+    4389501740041626911,
+    594753860711996542,
+    2683999403208077900,
+    884727045312140499,
+    6061516942462362704,
+    4706030315392479772,
+    1516748839963008303,
+    2503955633549438459,
+    3158591965023757497,
+    8276343336684373348,
+    7630773856103137007,
+    4749054231168720117,
+    6895791266262274772,
+    1959236991907931795,
+    6665382592706005290,
+    1267562107579544679,
+    339022958822092043,
+    580747836764049454,
+    2873854346442452044,
+    6739256895184828310,
+    932501625538964628,
+    1928115318668869323,
+    1875008384382039081,
+    7018198775900998582,
+    5570311034511747089,
+    8473472154288360716,
+    6929626790880814783,
+    1034322811529550119,
+    8855020890152288543,
+    6038617725207179566,
+    6148854113395715066,
+    1982425484996289389,
+    9064201894768977905,
+    4055800636610949823,
+    4181472750916675281,
+    1885068735202853111,
+    971968650317703214,
+    5014727766109029283,
+    3529472767044247733,
+    7921041463034169413,
+    4773030227234688958,
+    4622142403011158001,
+    7323679033671512918,
+    301131710575892578,
+    5069868975128775160,
+    6525863506928309808,
+    4262568450594538861,
+    4959703805179907393,
+    5942573855210671542,
+    1246039787382866509,
+    2296359590722797664,
+    4100414389071991763,
+    2062586135924985614,
+    7518310367359533419,
+    3939477493077995315,
+    609473217734149405,
+    2839971754129657301,
+    7661450782756069699,
+    8991106882712040033,
+    6671428321903749482,
+    2074497146397100139,
+    3715965628377727600,
+    7406856855270124596,
+    641654634756307569,
+    8869529004914596828,
+    7674420178371900175,
+    2716276396372425525,
+    8396251889784146062,
+    4105011073801836442,
+    5624260590293683575,
+    2157046816843976454,
+    2852555024834022575,
+    7021021959680271317,
+    3703715202678827978,
+    4049398215274179678,
+    102993412028190911,
+    2668414515668462995,
+    3237740495007510807,
+    2966615046957781816,
+    7060661306271544530,
+    7550476378732498450,
+    2679679055815415464,
+    1361540497119846821,
+    4062223096015946206,
+    7958122656762745029,
+    5010244472423065132,
+    8657871744805224079,
+    3387237324824341951,
+    8056454893899305092,
+    1833102173474557264,
+    2116053560630263038,
+    5273490960286327410,
+    355599387961733550,
+    3706808789193375388,
+    7655091899220717815,
+    6827024740172351346,
+    4443408478267024369,
+    2794248701148225844,
+    5523387002606591266,
+    8019930603078805169,
+    5910355407497484571,
+    8294339333539608614,
+    7893993277572420294,
+    5900202417484269011,
+    6658652798369384582,
+    5239679640287779199,
+    6879505835268544390,
+    9072863875989687827,
+    8407404255976638573,
+    6885583126301330951,
+    2955830365960575945,
+    8441324897347146067,
+    7103272959424283371,
+    8384495117664840720,
+    6256240351111949432,
+    2623653725806918514,
+    7221399663922932033,
+    2580607096987082548,
+    5933111988187669700,
+    6857303246263417269,
+    6627828553625491685,
+    4006717272925852425,
+    3492186315286808478,
+    267540624198203155,
+    197661888130215314,
+    3339175024549640524,
+    582658451968167135,
+    867202182843561201,
+    6992267995390430561,
+    269503206329491093,
+    1073135009901117442,
+    1571106144317793112,
+    3199696694105808204,
+    8726557607721558853,
+    6290500941879291267,
+    8032979825202034651,
+    9145979579639814164,
+    1455305596133729022,
+    7044942416136294283,
+    4400013774399585518,
+    6883338534355278503,
+    7014599984803621438,
+    1491511266087296262,
+    4672439289486410652,
+    8143162155078153526,
+    5768857755621916070,
+    3615051128959186253,
+    4996894616203668030,
+    8760592250534209593,
+    5143111199662593329,
+    8701963653916615870,
+    8963282864352258088,
+    6405115349790547281,
+    7646403493918104273,
+    4486902862237489824,
+    5540968229588958886,
+    6883161755341933638,
+    6952530017324568879,
+    464037219304963741,
+    542028780163120680,
+    2882323280669729229,
+    5786589711198395582,
+    4098795228789661338,
+    5459624156543102632,
+    6958047317055663470,
+    8076122136181561455,
+    1256628163514386147,
+    357714836488521443,
+    882819169490034082,
+    5178340551448275980,
+    8882724640932393247,
+    6993359793639003413,
+    5765258980191439944,
+    9121710967597913571,
+    8639991541206701894,
+    5338862983913171927,
+    8227281748854093357,
+    3273438587899022607,
+    2582160560455273565,
+    4953495489641913077,
+    8221007595096423627,
+    8760600854160766763,
+    335916473628202901,
+    807942051562149565,
+    7046835967652466372,
+    2033657530140853923,
+    4462322955521186691,
+    5745819575299335933,
+    1973048200781366810,
+    3463046301152497698,
+    4755743832655377179,
+    3102287810912604090,
+    189978097217562022,
+    7280519303237353263,
+    7882567965144404629,
+    2359872736764652304,
+    7267005202326949422,
+    6051176103647541584,
+    5105733495965097104,
+    9078419019742044261,
+    1282733041598740692,
+    964144833731872126,
+    4356468505346495871,
+    6980869179069742880,
+    9165450190857658010,
+    4812011868189615921,
+    5628888725915086596,
+    4328152505513953700,
+    1717645228333406794,
+    927107059951458632,
+    8009799620972252096,
+    3818505325422566513,
+    3680746146945014961,
+    4627730302745633660,
+    5757254740551208477,
+    5192154613872920062,
+    8650665503228381538,
+    1867213142865878706,
+    8868025024562375311,
+    5789248738259455738,
+    5123469698222246463,
+    300229589990706481,
+    7098470832581316064,
+    5654236753986846922,
+    4664030028422031674,
+    1216227051763937464,
+    8873359953308479121,
+    6014726802800544095,
+    3906677832231141407,
+    4520292712669008812,
+    7770113078125229590,
+    4065426285920151852,
+    5301228834302368495,
+    8444877338091377190,
+    3708572698759865506,
+    8292452655851894373,
+    3494139469501464575,
+    619922060993745652,
+    7555436974573013715,
+    8915747141271134900,
+    4124661028394417970,
+    1938962159856950385,
+    5783531530772981404,
+    5761079595243707313,
+    7972094617649838400,
+    678221388809510663,
+    2966281015735966925,
+    588700716566151174,
+    9174154304393824554,
+    3421852852843435529,
+    7381523990137153481,
+    5307939009801086513,
+    2962622727973521853,
+    6743164506018537737,
+    4944581286525557798,
+    8818172478323246508,
+    6055050555010937690,
+    908258415997589633,
+    3874591447146954262,
+    2414176987927565227,
+    6995751159811224398,
+    8473264275581171130,
+    2234808083458481282,
+    5322987638421166741,
+    1827734745347748574,
+    6371632426141574654,
+    4449785942348100113,
+    2443188895298620374,
+    6235257470111633872,
+    2617033274285750325,
+    2050169851885309807,
+    3850191664937258201,
+    7182311079424373947,
+    8580010511248323182,
+    8681652350874146755,
+    7809961771167270714,
+    7555094956033300237,
+    8688007181369822252,
+    1912774781059097384,
+    664753600840212111,
+    2271096741054886050,
+    885295142983891241,
+    8752317592514216062,
+    2686326567470791557,
+    5742046454157990681,
+    8726708473986317559,
+    6952765619526639609,
+    4792446964859314392,
+    1747895297271658912,
+    8638249815679332518,
+    7482114214017083012,
+    2208596777587537611,
+    3468454473187293920,
+    3902665156943615742,
+    7004843839049634735,
+    8858372404725507781,
+    1441503212345960305,
+    7877546532152249851,
+    8060422985689516552,
+    3367704685358895831,
+    4031220433747497909,
+    3654664330431149021,
+    4164942569318503311,
+    8333147140092366549,
+    7004867212636713490,
+    1320139437763620158,
+    6554789124515155082,
+    2675878577785970807,
+    1511964157507044413,
+    1156183626000694485,
+    2127508959075433505,
+    3712256182993983065,
+    5295478449592796777,
+    558955840808580226,
+    4316751427566161010,
+    863580083885179097,
+    7583488433687638837,
+    3064432377027112401,
+    1047857455813540714,
+    1687838934586982426,
+    6861579642372804787,
+    1837508759336167731,
+    6440737107930273480,
+    129937089475446139,
+    8476925044180099444,
+    4823665144071899143,
+    5160135633417084974,
+    2682498848468716639,
+    395872405381623711,
+    7686880110852770331,
+    6969321929797297,
+    5332953919838673552,
+    2555265761464282062,
+    8977191043059921302,
+    3258432744449399718,
+    6028762022082194960,
+    1534444384906798171,
+    7114168591205914709,
+    7701084579336039463,
+    3481526983470640390,
+    1596873129049570051,
+    5269478939256626057,
+    6448018641776730249,
+    5330783893279169468,
+    7568930178265424240,
+    8799185606820768792,
+    4902952193876981743,
+    3854701651521287615,
+    3894052037944586211,
+    4079358440676280993,
+    4214319767003819597,
+    8605400082155448933,
+    2418307346118894420,
+    3625565319455983499,
+    8201438361643927570,
+    4194839919320889231,
+    2268527940477784666,
+    6314912678517472288,
+    5005830166758426743,
+    6136042868560420315,
+    5606671091490978485,
+    5375382082029622627,
+    449233996439036842,
+    5142703641007569330,
+    1760450976305358562,
+    7186937193349816995,
+    6847955605581866329,
+    3799806027248367024,
+    9214088957307960475,
+    6432155533346080481,
+    863840941671776364,
+    7017551163482918635,
+    3760318765410322211,
+    2123758964534008227,
+    358619953256068962,
+    9171624204299663789,
+    1476070012026601411,
+    2953784821695531465,
+    5682677975165409950,
+    296427332675684248,
+    3628594670897709440,
+    5558631009836678718
+  ],
+  "retiredRelationUids": [
+    3098911154464194148,
+    1380048075353382331,
+    1423887170457495499
+  ],
+  "version": 1
+}

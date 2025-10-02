@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_const_declarations: true
+    avoid_print: true                  # Prefira logs com debugPrint ou ferramentas
+    avoid_unnecessary_containers: true
+    avoid_empty_else: true
+    curly_braces_in_flow_control_structures: true
+    unnecessary_this: true
+    prefer_final_locals: true
+    prefer_single_quotes: true         # Consistência em aspas
+    sort_child_properties_last: true  # Propriedades visuais por último
+    avoid_dynamic_calls: true
+    avoid_types_as_parameter_names: true
+    no_logic_in_create_state: true
+
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
