@@ -1,4 +1,0 @@
-enum InicioTerminoEvento {
-  inicio,
-  termino,
-}

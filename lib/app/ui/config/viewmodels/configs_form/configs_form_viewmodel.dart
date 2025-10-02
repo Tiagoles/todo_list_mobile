@@ -29,7 +29,7 @@ class ConfigsFormViewModel implements Disposable{
     return _repository.saveConfigs(configsForm).flatMap((_) async {
       if (canReset){
         return _repository.resetDatabase()
-          .onSuccess((_) => Modular.to.pushNamed('/startup/'));
+          .onSuccess((_) => Modular.to.pushNamed('/home/'));
       }
       Modular.to.pop();
       return const Success(unit);

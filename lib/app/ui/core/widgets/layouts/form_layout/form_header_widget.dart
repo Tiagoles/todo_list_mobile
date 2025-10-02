@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smaservicos/app/ui/apontamento_hora/widgets/apontamento_hora_timer.dart';
 import 'package:smaservicos/app/utils/extensions/context_extensions.dart';
 
 class FormHeaderWidget extends StatelessWidget {
@@ -37,10 +36,6 @@ class FormHeaderWidget extends StatelessWidget {
               )
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ApontamentoHoraTimer(),
-        )
       ],
     );
   }

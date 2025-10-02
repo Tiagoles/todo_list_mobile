@@ -4,7 +4,6 @@ import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:smaservicos/app/ui/config/widgets/config_sidenav_widget.dart';
 import 'package:smaservicos/app/ui/core/widgets/menu/sidenav/sidenav_item_widget.dart';
 import 'package:smaservicos/app/ui/core/widgets/menu/sidenav/theme_switch_widget.dart';
-import 'package:smaservicos/app/ui/inspecao/widgets/menu/sidenav_lancamentos_item.dart';
 import 'package:smaservicos/app/utils/extensions/color_scheme_extension.dart';
 import 'package:smaservicos/app/utils/extensions/context_extensions.dart';
 
@@ -53,7 +52,6 @@ class SidenavWidget extends StatelessWidget {
                         Modular.to.pushNamed('/home/');
                       }
                   ),
-                  SidenavLancamentosItem(),
                   SidenavItemWidget(
                     route: '/apontamentos-hora/',
                     icon: TablerIcons.clock,
@@ -82,9 +80,9 @@ class SidenavWidget extends StatelessWidget {
                         SidenavItemWidget(
                           icon: TablerIcons.refresh,
                           title: 'Reiniciar',
-                          route: '/startup',
+                          route: '/home',
                           onTap: (){
-                            Modular.to.pushNamed('/startup/');
+                            Modular.to.pushNamed('/home/');
                           },
                         ),
                         const ThemeSwitchWidget(),

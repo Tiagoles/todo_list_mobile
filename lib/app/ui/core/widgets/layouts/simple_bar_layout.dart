@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smaservicos/app/ui/apontamento_hora/widgets/apontamento_hora_timer.dart';
 import 'package:smaservicos/app/ui/core/widgets/menu/app_bar/app_bar_widget.dart';
 import 'package:smaservicos/app/ui/core/widgets/menu/sidenav/sidenav_widget.dart';
 
@@ -40,7 +39,6 @@ class SimpleBarLayout extends StatelessWidget {
       child: Column(
         spacing: 8,
         children: [
-          ApontamentoHoraTimer(),
           Expanded(child: child),
         ],
       ),

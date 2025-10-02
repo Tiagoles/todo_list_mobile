@@ -50,6 +50,6 @@ flutter {
     source = "../.."
 }
 dependencies{
-    debugImplementation("io.objectbox:objectbox-android-objectbrowser:4.3.1")
+    debugImplementation("io.objectbox:objectbox-android-objectbrowser:5.0.1")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }

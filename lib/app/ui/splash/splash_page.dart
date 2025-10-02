@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _onCommandChanged(){
-    if(widget.viewModel.loadCommand.completed) return Modular.to.navigate('/startup/');
+    if(widget.viewModel.loadCommand.completed) return Modular.to.navigate('/home/');
     final errorMessage = widget.viewModel.loadCommand.errorMessage;
     if(errorMessage != null){
       WidgetsBinding.instance.addPostFrameCallback((_) {

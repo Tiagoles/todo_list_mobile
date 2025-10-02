@@ -7,14 +7,6 @@ import 'package:result_dart/result_dart.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:smaservicos/app/configs/database/objectbox/objectbox.dart';
 import 'package:smaservicos/app/data/exceptions/core_exceptions.dart';
-import 'package:smaservicos/app/data/models/acao_tomada/database/db_acao_tomada.dart';
-import 'package:smaservicos/app/data/models/acao_tomada/database/db_acao_tomada_conclusao.dart';
-import 'package:smaservicos/app/data/models/inspecao/database/conclusao/db_inspecao_conclusao.dart';
-import 'package:smaservicos/app/data/models/inspecao/database/db_inspecao.dart';
-import 'package:smaservicos/app/data/models/inspecao_item/database/db_inspecao_item.dart';
-import 'package:smaservicos/app/data/models/inspecao_item/database/db_inspecao_item_conclusao.dart';
-import 'package:smaservicos/app/data/models/tipo_irregularidade/database/db_tipo_irregularidade.dart';
-import 'package:smaservicos/app/data/models/tipo_irregularidade/database/db_tipo_irregularidade_conclusao.dart';
 import 'package:smaservicos/app/utils/directory_utils.dart';
 
 class DatabaseService{
@@ -141,16 +133,7 @@ class DatabaseService{
 
   AsyncResult<Unit> dropDatabase() async {
     try{
-      await Future.wait([
-        getBox<DbAcaoTomada>().removeAllAsync(),
-        getBox<DbAcaoTomadaConclusao>().removeAllAsync(),
-        getBox<DbTipoIrregularidade>().removeAllAsync(),
-        getBox<DbTipoIrregularidadeConclusao>().removeAllAsync(),
-        getBox<DbInspecaoItem>().removeAllAsync(),
-        getBox<DbInspecaoItemConclusao>().removeAllAsync(),
-        getBox<DbInspecao>().removeAllAsync(),
-        getBox<DbInspecaoConclusao>().removeAllAsync(),
-      ]);
+      await Future.wait([]);
       return const Success(unit);
     } on ObjectBoxException catch(e, s){
       return Failure(LocalDatabaseException(e.message, s));
