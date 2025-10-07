@@ -29,17 +29,16 @@ class _AppWidgetState extends State<AppWidget> {
     final AppTheme theme = AppTheme();
     return ValueListenableBuilder(
       valueListenable: Modular.get<ThemeViewmodel>(),
-      builder: (_, value, child){
+      builder: (_, value, child) {
         return MaterialApp.router(
           title: 'SMA Inspeção',
           themeMode: value,
           theme: theme.light(context),
           darkTheme: theme.dark(context),
           routeInformationParser: Modular.routeInformationParser,
-          routerDelegate: Modular.routerDelegate
+          routerDelegate: Modular.routerDelegate,
         );
-      }
+      },
     );
-
   }
 }

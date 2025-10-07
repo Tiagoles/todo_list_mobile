@@ -15,6 +15,7 @@ import 'package:objectbox/objectbox.dart' as obx;
 import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
 import '../../../../app/data/models/objectbox/db_general.dart';
+import '../../../../app/data/models/todo/database/db_todo.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -30,6 +31,46 @@ final _entities = <obx_int.ModelEntity>[
         name: 'id',
         type: 6,
         flags: 1,
+      ),
+    ],
+    relations: <obx_int.ModelRelation>[],
+    backlinks: <obx_int.ModelBacklink>[],
+  ),
+  obx_int.ModelEntity(
+    id: const obx_int.IdUid(2, 3158782516334154955),
+    name: 'DbTodo',
+    lastPropertyId: const obx_int.IdUid(5, 7385981622861865001),
+    flags: 0,
+    properties: <obx_int.ModelProperty>[
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(1, 5085316503914359754),
+        name: 'id',
+        type: 6,
+        flags: 1,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(2, 938391719158657182),
+        name: 'description',
+        type: 9,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(3, 1046506912850304180),
+        name: 'createdAt',
+        type: 10,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(4, 2617668729206867150),
+        name: 'endedAt',
+        type: 10,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(5, 7385981622861865001),
+        name: 'deletedAt',
+        type: 10,
+        flags: 0,
       ),
     ],
     relations: <obx_int.ModelRelation>[],
@@ -75,7 +116,7 @@ Future<obx.Store> openStore({
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(1, 2393093046764237041),
+    lastEntityId: const obx_int.IdUid(2, 3158782516334154955),
     lastIndexId: const obx_int.IdUid(0, 0),
     lastRelationId: const obx_int.IdUid(0, 0),
     lastSequenceId: const obx_int.IdUid(0, 0),
@@ -113,6 +154,67 @@ obx_int.ModelDefinition getObjectBoxModel() {
         return object;
       },
     ),
+    DbTodo: obx_int.EntityDefinition<DbTodo>(
+      model: _entities[1],
+      toOneRelations: (DbTodo object) => [],
+      toManyRelations: (DbTodo object) => {},
+      getId: (DbTodo object) => object.id,
+      setId: (DbTodo object, int id) {
+        object.id = id;
+      },
+      objectToFB: (DbTodo object, fb.Builder fbb) {
+        final descriptionOffset = fbb.writeString(object.description);
+        fbb.startTable(6);
+        fbb.addInt64(0, object.id);
+        fbb.addOffset(1, descriptionOffset);
+        fbb.addInt64(2, object.createdAt.millisecondsSinceEpoch);
+        fbb.addInt64(3, object.endedAt?.millisecondsSinceEpoch);
+        fbb.addInt64(4, object.deletedAt?.millisecondsSinceEpoch);
+        fbb.finish(fbb.endTable());
+        return object.id;
+      },
+      objectFromFB: (obx.Store store, ByteData fbData) {
+        final buffer = fb.BufferContext(fbData);
+        final rootOffset = buffer.derefObject(0);
+        final endedAtValue = const fb.Int64Reader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          10,
+        );
+        final deletedAtValue = const fb.Int64Reader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          12,
+        );
+        final idParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          4,
+          0,
+        );
+        final descriptionParam = const fb.StringReader(
+          asciiOptimization: true,
+        ).vTableGet(buffer, rootOffset, 6, '');
+        final createdAtParam = DateTime.fromMillisecondsSinceEpoch(
+          const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0),
+        );
+        final endedAtParam = endedAtValue == null
+            ? null
+            : DateTime.fromMillisecondsSinceEpoch(endedAtValue);
+        final deletedAtParam = deletedAtValue == null
+            ? null
+            : DateTime.fromMillisecondsSinceEpoch(deletedAtValue);
+        final object = DbTodo(
+          id: idParam,
+          description: descriptionParam,
+          createdAt: createdAtParam,
+          endedAt: endedAtParam,
+          deletedAt: deletedAtParam,
+        );
+
+        return object;
+      },
+    ),
   };
 
   return obx_int.ModelDefinition(model, bindings);
@@ -123,5 +225,33 @@ class DbGeneral_ {
   /// See [DbGeneral.id].
   static final id = obx.QueryIntegerProperty<DbGeneral>(
     _entities[0].properties[0],
+  );
+}
+
+/// [DbTodo] entity fields to define ObjectBox queries.
+class DbTodo_ {
+  /// See [DbTodo.id].
+  static final id = obx.QueryIntegerProperty<DbTodo>(
+    _entities[1].properties[0],
+  );
+
+  /// See [DbTodo.description].
+  static final description = obx.QueryStringProperty<DbTodo>(
+    _entities[1].properties[1],
+  );
+
+  /// See [DbTodo.createdAt].
+  static final createdAt = obx.QueryDateProperty<DbTodo>(
+    _entities[1].properties[2],
+  );
+
+  /// See [DbTodo.endedAt].
+  static final endedAt = obx.QueryDateProperty<DbTodo>(
+    _entities[1].properties[3],
+  );
+
+  /// See [DbTodo.deletedAt].
+  static final deletedAt = obx.QueryDateProperty<DbTodo>(
+    _entities[1].properties[4],
   );
 }
