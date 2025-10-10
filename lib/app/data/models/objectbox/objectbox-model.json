@@ -19,7 +19,7 @@
     },
     {
       "id": "2:3158782516334154955",
-      "lastPropertyId": "5:7385981622861865001",
+      "lastPropertyId": "6:5737238542548690974",
       "name": "DbTodo",
       "properties": [
         {
@@ -47,6 +47,11 @@
           "id": "5:7385981622861865001",
           "name": "deletedAt",
           "type": 10
+        },
+        {
+          "id": "6:5737238542548690974",
+          "name": "priority",
+          "type": 6
         }
       ],
       "relations": []

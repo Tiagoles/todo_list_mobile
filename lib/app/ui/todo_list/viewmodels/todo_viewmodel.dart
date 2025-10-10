@@ -8,8 +8,9 @@ class TodoViewmodel extends ChangeNotifier {
   final TodoRepository _repository;
   final todos = ValueNotifier<List<Todo>>([]);
   late final Command0<List<Todo>> getCommand;
-  late final Command2<Todo, Todo, bool?> saveCommand;
+  late final Command1<Todo, Todo> saveCommand;
   late final Command1<Unit, Todo> deleteCommand;
+  late final Command1<Todo, int> findByIdCommand;
 
   TodoViewmodel(this._repository) {
     getCommand = Command0(_repository.getAllTodos);
@@ -20,17 +21,28 @@ class TodoViewmodel extends ChangeNotifier {
       });
     });
 
-    saveCommand = Command2(_saveTodo);
+    saveCommand = Command1(_saveTodo);
     deleteCommand = Command1(deleteTodo);
-
+    findByIdCommand = Command1(_repository.findById);
   }
 
-  AsyncResult<Todo> _saveTodo(Todo todo, bool? checked) async {
-    final Todo task = todo.copyWith(endedAt: checked! ? DateTime.now() : null);
-    return await _repository.saveTodo(task);
+  AsyncResult<Todo> _saveTodo(Todo todo) async {
+    return await _repository.saveTodo(todo);
   }
-  AsyncResult<Unit> deleteTodo(Todo todo) async{
+
+  AsyncResult<Unit> deleteTodo(Todo todo) async {
     final Todo task = todo.copyWith(deletedAt: DateTime.now());
     return await _repository.deleteTodo(task);
   }
+
+  void updateTodo(Todo todo) async {
+     saveCommand.execute(todo);
+  }
+
+  void toggleEndedAt(Todo todo) async {
+    DateTime? endedAt = todo.endedAt;
+    endedAt = endedAt == null ? DateTime.now() : null;
+    saveCommand.execute(todo.copyWith(endedAt: endedAt));
+  }
+
 }

@@ -39,7 +39,7 @@ final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
     id: const obx_int.IdUid(2, 3158782516334154955),
     name: 'DbTodo',
-    lastPropertyId: const obx_int.IdUid(5, 7385981622861865001),
+    lastPropertyId: const obx_int.IdUid(6, 5737238542548690974),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
@@ -70,6 +70,12 @@ final _entities = <obx_int.ModelEntity>[
         id: const obx_int.IdUid(5, 7385981622861865001),
         name: 'deletedAt',
         type: 10,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(6, 5737238542548690974),
+        name: 'priority',
+        type: 6,
         flags: 0,
       ),
     ],
@@ -164,12 +170,13 @@ obx_int.ModelDefinition getObjectBoxModel() {
       },
       objectToFB: (DbTodo object, fb.Builder fbb) {
         final descriptionOffset = fbb.writeString(object.description);
-        fbb.startTable(6);
+        fbb.startTable(7);
         fbb.addInt64(0, object.id);
         fbb.addOffset(1, descriptionOffset);
         fbb.addInt64(2, object.createdAt.millisecondsSinceEpoch);
         fbb.addInt64(3, object.endedAt?.millisecondsSinceEpoch);
         fbb.addInt64(4, object.deletedAt?.millisecondsSinceEpoch);
+        fbb.addInt64(5, object.priority);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -198,6 +205,12 @@ obx_int.ModelDefinition getObjectBoxModel() {
         final createdAtParam = DateTime.fromMillisecondsSinceEpoch(
           const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0),
         );
+        final priorityParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          14,
+          0,
+        );
         final endedAtParam = endedAtValue == null
             ? null
             : DateTime.fromMillisecondsSinceEpoch(endedAtValue);
@@ -208,6 +221,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
           id: idParam,
           description: descriptionParam,
           createdAt: createdAtParam,
+          priority: priorityParam,
           endedAt: endedAtParam,
           deletedAt: deletedAtParam,
         );
@@ -253,5 +267,10 @@ class DbTodo_ {
   /// See [DbTodo.deletedAt].
   static final deletedAt = obx.QueryDateProperty<DbTodo>(
     _entities[1].properties[4],
+  );
+
+  /// See [DbTodo.priority].
+  static final priority = obx.QueryIntegerProperty<DbTodo>(
+    _entities[1].properties[5],
   );
 }

@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
-import 'package:smaservicos/app/domain/entities/todo/todo.dart';
 import 'package:smaservicos/app/plugins/modal_actions.dart';
 import 'package:smaservicos/app/plugins/toastr_service.dart';
 import 'package:smaservicos/app/ui/core/widgets/buttons/bootstrap_button/bootstrap_button.d.dart';
@@ -32,18 +32,12 @@ class BodyCard extends StatefulWidget {
 
 class _BodyCardState extends State<BodyCard> {
   final _formKey = GlobalKey<FormState>();
-  final _formGroup = TodoFormGroup();
   final viewModel = Modular.get<TodoViewmodel>();
 
   @override
   void initState() {
     super.initState();
     viewModel.saveCommand.addListener(() {
-      if (viewModel.saveCommand.completed && !viewModel.saveCommand.error) {
-        for (var control in _formGroup.controls.values) {
-          control.setValue('');
-        }
-      }
       viewModel.saveCommand.error
           ? ToastrService.error(context: context, message: 'Erro ao salvar')
           : null;
@@ -76,13 +70,15 @@ class _BodyCardState extends State<BodyCard> {
                     ),
                   Expanded(child: widget.title!),
                   BootstrapButtonWidget(
-                    onPressed: () => {
+                    onPressed: (){
+                      final formGroup = TodoFormGroup();
                       ModalActions.showAlertBottomSheet(
                         context,
                         title: 'Adicionar',
                         content: TodoForm(
                           formKey: _formKey,
-                          formGroup: _formGroup,
+                          formGroup: formGroup,
+                          viewmodel: viewModel,
                         ),
                         actions: [
                           BootstrapButtonWidget(
@@ -90,24 +86,14 @@ class _BodyCardState extends State<BodyCard> {
                               Modular.to.pop();
                             },
                             icon: TablerIcons.x,
-                            color: ButtonColor.primary,
+                            color: ButtonColor.defaultColor,
                             type: ButtonType.textButton,
                             text: 'Fechar',
                           ),
                           BootstrapButtonWidget(
                             onPressed: () async {
                               if (_formKey.currentState?.validate() ?? false) {
-                                final descricao = _formGroup
-                                    .textControl('descricao')
-                                    .value;
-                                await viewModel.saveCommand.execute(
-                                  Todo(
-                                    id: 0,
-                                    description: descricao,
-                                    createdAt: DateTime.now(),
-                                  ),
-                                  false,
-                                );
+                                await viewModel.saveCommand.execute(formGroup.toModel());
                                 Modular.to.pop();
                               }
                             },
@@ -116,7 +102,7 @@ class _BodyCardState extends State<BodyCard> {
                             text: 'Salvar',
                           ),
                         ],
-                      ),
+                      );
                     },
                     icon: TablerIcons.plus,
                     color: ButtonColor.primary,

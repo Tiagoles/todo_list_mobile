@@ -18,7 +18,9 @@ class TodoService {
   }
 
   AsyncResult<QueryBuilder<DbTodo>> filterQuery(DbTodoFilter? filter) async {
-    Condition<DbTodo> condition = DbTodo_.description.notNull().and(DbTodo_.deletedAt.isNull());
+    Condition<DbTodo> condition = DbTodo_.description.notNull().and(
+      DbTodo_.deletedAt.isNull(),
+    );
 
     if (filter != null) {
       if (filter.id != null) {
@@ -37,7 +39,7 @@ class TodoService {
 
     QueryBuilder<DbTodo> builder = _databaseService.store.box<DbTodo>().query(
       condition,
-    );
+    ).order(DbTodo_.priority, flags: Order.descending).order(DbTodo_.createdAt);
 
     return Success(builder);
   }
@@ -56,6 +58,7 @@ class TodoService {
       endedAt: data.endedAt,
       deletedAt: data.deletedAt,
       id: data.id,
+      priority: data.priority,
     );
 
     final id = await box.putAsync(todo);
@@ -76,6 +79,7 @@ class TodoService {
         createdAt: data.createdAt,
         endedAt: data.endedAt,
         deletedAt: DateTime.now(),
+        priority: data.priority,
       );
 
       await box.putAsync(todo);
@@ -85,4 +89,7 @@ class TodoService {
     }
   }
 
+  AsyncResult<DbTodo> findById(int idTodo) async {
+    return _databaseService.getById<DbTodo>(idTodo);
+  }
 }

@@ -40,4 +40,7 @@ class TodoRepository {
       return Failure(Exception('Erro ao excluir todo: $e'));
     }
   }
+  AsyncResult<Todo> findById(int idTodo) async {
+    return _service.findById(idTodo).map((e)=> e.toEntity());
+  }
 }
